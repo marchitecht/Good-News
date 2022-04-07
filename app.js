@@ -13,6 +13,7 @@ const FileStore = require('session-file-store')(session);
 // ROUTES
 const indexRouter = require('./routes/index.router');
 const userRouter = require('./routes/user.router');
+const authRouter = require('./routes/auth.router')
 
 // ВЫЗЫВАЕМ EXPRESS
 const app = express();
@@ -53,6 +54,7 @@ app.use((req, res, next) => {
 // ROUTERS
 app.use('/', indexRouter);
 app.use('/user', userRouter);
+app.use('/auth', authRouter)
 
 // ERRORS
 // Если HTTP-запрос дошёл до этой строчки, значит ни один из ранее встречаемых рутов не ответил на запрос.
