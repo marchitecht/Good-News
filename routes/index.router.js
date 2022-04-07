@@ -6,10 +6,11 @@ router.route('/')
     res.render('index');
   });
 router.post('/', async (req, res) => {
-  console.log(req.body);
+  console.log('===>',req.body);
+  console.log(req.session.user);
   res.sendStatus(200);
   // try {
-  //   const tags = await Tags.create({ name });
+  //   const tag = await Tags.create({ name });
   //   res.json(tags);
   // } catch (error) {
   //   console.log(error);
