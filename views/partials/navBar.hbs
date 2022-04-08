@@ -1,29 +1,29 @@
-<nav class="navbar navbar-expand navbar-light bg-light position-relative">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">GoodNews</a>
-    {{!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> --}}
-    <div class="navbar justify-content-end" id="navbarSupportedContent">
-      <ul class="navbar-nav position-absolute me-auto mb-2 mb-lg-0">
-        {{#if user}}
-        <li class="nav-item">
-          <a class="nav-link" href="/user"><img class="authIcon" src="/src/img/person-outline.svg" alt="Личный кабинет"></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id='logoutLink' href="/auth/logout"><img class="authIcon" src="/src/img/exit-outline.svg" alt="Выход"></a>
-        </li>
-        {{else}}
-        <li class="nav-item text-end">
-          <a class="nav-link" href="/auth/signup">Регистрация</a>
-        </li>
-        <li class="nav-item text-end">
-          <a class="nav-link" href="/auth/signin">Авторизация</a>
-        </li>
-         
-      {{/if}}
-      </ul>
+  <nav class="navbar navbar-expand navbar-light bg-light position-relative">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">GoodNews</a>
+      {{!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> --}}
+      <div class="navbar justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav position-absolute me-auto mb-2 mb-lg-0">
+          {{#if user}}
+          <li class="nav-item">
+            <a class="nav-link" href="/user"><img class="authIcon" src="/src/img/person-outline.svg" alt="Личный кабинет"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id='logoutLink' href="/auth/logout"><img class="authIcon" src="/src/img/exit-outline.svg" alt="Выход"></a>
+          </li>
+          {{else}}
+          <li class="nav-item text-end">
+            <a class="nav-link" href="/auth/signup">Регистрация</a>
+          </li>
+          <li class="nav-item text-end">
+            <a class="nav-link" href="/auth/signin">Авторизация</a>
+          </li>
+          
+        {{/if}}
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
