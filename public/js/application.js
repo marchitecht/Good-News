@@ -15,7 +15,7 @@ tagForm.addEventListener('click', async (e) => {
                 body: JSON.stringify(formTag),
             });
             const result = response.json();
-            console.log(result);
+            // console.log(result);
         } else if (e.target.innerHTML === 'Чёрный список') {
             formTag.isGood = false;
             console.log(formTag);
@@ -27,7 +27,7 @@ tagForm.addEventListener('click', async (e) => {
                 body: JSON.stringify(formTag),
             });
             const result = response.json();
-            console.log(result);
+            // console.log(result);
         }
     }
 });
