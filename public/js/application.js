@@ -19,12 +19,12 @@ tagForm.addEventListener('click', async (e) => {
                 body: JSON.stringify(formTag),
             });
             if (response.ok) {
-              console.log(good,formTag.tagName);
-              // if (good.getElementById(`${formTag.tagName}`)) {
+              const smth = document.getElementById(`${formTag.tagName}w`)
+              if (!smth) {
                 good.insertAdjacentHTML('beforeend', `
-                <div class="ps-2 pe-2 mt-1 ms-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-50" id="${formTag.tagName}" >${formTag.tagName}<button type="button"  class="ms-2 btn-close" id="delete" aria-label="Close"></button></div>
+                <div class="ps-2 pe-2 mt-1 ms-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-50" id="${formTag.tagName}w" >${formTag.tagName}<button type="button"  class="ms-2 btn-close" id="delete" aria-label="Close"></button></div>
                 `)
-              // }
+              }
               // console.log('Уже есть такой тег');
             }
         } else if (e.target.innerHTML === 'Чёрный список') {
@@ -38,9 +38,14 @@ tagForm.addEventListener('click', async (e) => {
                 body: JSON.stringify(formTag),
             });
             if (response.ok) {
+              
+              const smth = document.getElementById(`${formTag.tagName}b`)
+              if (!smth) {
               bad.insertAdjacentHTML('beforeend', `
-              <div class="ps-2 pe-2 mt-1 me-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-90 bg-dark text-white" id="${formTag.tagName}">${formTag.tagName}<button type="button" class="ms-2 btn-close btn-close-white" id="delete" aria-label="Close"></button></div>
+              <div class="ps-2 pe-2 mt-1 me-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-90 bg-dark text-white" id="${formTag.tagName}b">${formTag.tagName}<button type="button" class="ms-2 btn-close btn-close-white" id="delete" aria-label="Close"></button></div>
               `)
+
+              }
             }
         }
     }
