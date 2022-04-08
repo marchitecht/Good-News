@@ -22,10 +22,18 @@ router.post('/', async (req, res) => {
   res.sendStatus(200);
 });
 
-router.delete('/:name', async function (req, res, next) {
-  const { name } = req.params;
+router.delete('/:tagForDel', async function (req, res, next) {
+  const { tagForDel } = req.params;
+  const name = tagForDel.slice(0,-1)
+  const isGood = tagForDel.slice(-1);
+  console.log('====>',tagForDel,'|',name.split(''),'|',isGood);
   const tag = await Tag.findOne({where: {name}, raw: true})
-  await BWlist.destroy({ where: { tagId: tag.id } });
+  if (+isGood) {
+    await BWlist.destroy({ where: { tagId: tag.id, isGood: true} });
+  } else {
+    await BWlist.destroy({ where: { tagId: tag.id, isGood: false} });
+  }
+
   res.sendStatus(200);
 });
 module.exports = router;

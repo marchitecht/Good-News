@@ -46,11 +46,20 @@ tagForm.addEventListener('click', async (e) => {
     }
 });
 
-allTags.addEventListener('click', async(e)=> {
+good.addEventListener('click', async(e)=> {
   const div = e.target.closest('div')
-  console.log('yes');
   if (e.target.id === 'delete') {
-    const response = await fetch (`/${div.id}`, { method: 'delete' });
+    const response = await fetch (`/${div.id}1`, { method: 'delete' });
+    if (response.ok) {
+      div.remove()
+    }
+  }
+})
+
+bad.addEventListener('click', async(e)=> {
+  const div = e.target.closest('div')
+  if (e.target.id === 'delete') {
+    const response = await fetch (`/${div.id}0`, { method: 'delete' });
     if (response.ok) {
       div.remove()
     }

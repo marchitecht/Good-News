@@ -27,12 +27,6 @@
         {{#each whiteList}}
            <div class="ps-2 pe-2 mt-1 ms-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-50" id="{{name}}">{{name}}<button type="button" class="ms-2 btn-close" id="delete" aria-label="Close"></button></div>
         {{/each}}
-        
-        {{!-- <div class="ps-2 pe-2 mt-1 ms-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-50">Новости технологий<button type="button" class="ms-2 btn-close" aria-label="Close"></button></div>
-        <div class="ps-2 pe-2 mt-1 ms-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-50">Космос<button type="button" class="ms-2 btn-close" aria-label="Close"></button></div>
-        <div class="ps-2 pe-2 mt-1 ms-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-50">Общество<button type="button" class="ms-2 btn-close" aria-label="Close"></button></div>
-        <div class="ps-2 pe-2 mt-1 ms-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-50">Наука<button type="button" class="ms-2 btn-close" aria-label="Close"></button></div>
-        <div class="ps-2 pe-2 mt-1 ms-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-50">Культура<button type="button" class="ms-2 btn-close" aria-label="Close"></button></div> --}}
 
       </div>
 
@@ -41,9 +35,10 @@
       
       <div class="d-flex flex-wrap bd-highlight mb-3" id="bad">
 
-        {{#each whiteList}}
-            <div class="ps-2 pe-2 mt-1 ms-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-90 bg-dark text-white" id="{{name}}">{{name}}<button type="button" class="btn-close btn-close-white" id="delete" aria-label="Close"></button></div>
+        {{#each blackList}}
+            <div class="ps-2 pe-2 mt-1 me-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-90 bg-dark text-white" id="{{name}}">{{name}}<button type="button" class="ms-2 btn-close btn-close-white" id="delete" aria-label="Close"></button></div>
         {{/each}}
+
       </div>
 
     </div>
