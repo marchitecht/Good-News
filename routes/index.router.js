@@ -24,9 +24,8 @@ router.post('/', async (req, res) => {
 
 router.delete('/:tagForDel', async function (req, res, next) {
   const { tagForDel } = req.params;
-  const name = tagForDel.slice(0,-1)
+  const name = tagForDel.slice(0,-2)
   const isGood = tagForDel.slice(-1);
-  console.log('====>',tagForDel,'|',name.split(''),'|',isGood);
   const tag = await Tag.findOne({where: {name}, raw: true})
   if (+isGood) {
     await BWlist.destroy({ where: { tagId: tag.id, isGood: true} });

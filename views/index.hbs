@@ -25,7 +25,7 @@
       
       <div class="d-flex flex-wrap justify-content-end bd-highlight mb-3" id="good">
         {{#each whiteList}}
-           <div class="ps-2 pe-2 mt-1 ms-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-50" id="{{name}}">{{name}}<button type="button" class="ms-2 btn-close" id="delete" aria-label="Close"></button></div>
+           <div class="ps-2 pe-2 mt-1 ms-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-50" id="{{name}}w">{{name}}<button type="button" class="ms-2 btn-close" id="delete" aria-label="Close"></button></div>
         {{/each}}
 
       </div>
@@ -36,7 +36,7 @@
       <div class="d-flex flex-wrap bd-highlight mb-3" id="bad">
 
         {{#each blackList}}
-            <div class="ps-2 pe-2 mt-1 me-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-90 bg-dark text-white" id="{{name}}">{{name}}<button type="button" class="ms-2 btn-close btn-close-white" id="delete" aria-label="Close"></button></div>
+            <div class="ps-2 pe-2 mt-1 me-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-90 bg-dark text-white" id="{{name}}b">{{name}}<button type="button" class="ms-2 btn-close btn-close-white" id="delete" aria-label="Close"></button></div>
         {{/each}}
 
       </div>
