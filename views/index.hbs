@@ -20,35 +20,30 @@
 </div>
 
 
-<div class="row mt-3">
+<div class="row mt-3" id="allTags">
     <div class="col">
       
-      <div class="d-flex flex-wrap justify-content-end bd-highlight mb-3">
-        
-        <div class="ps-2 pe-2 mt-1 ms-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-50">Спорт<button type="button" class="ms-2 btn-close" aria-label="Close"></button></div>
-        <div class="ps-2 pe-2 mt-1 ms-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-50">Новости технологий<button type="button" class="ms-2 btn-close" aria-label="Close"></button></div>
-        <div class="ps-2 pe-2 mt-1 ms-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-50">Космос<button type="button" class="ms-2 btn-close" aria-label="Close"></button></div>
-        <div class="ps-2 pe-2 mt-1 ms-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-50">Общество<button type="button" class="ms-2 btn-close" aria-label="Close"></button></div>
-        <div class="ps-2 pe-2 mt-1 ms-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-50">Наука<button type="button" class="ms-2 btn-close" aria-label="Close"></button></div>
-        <div class="ps-2 pe-2 mt-1 ms-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-50">Культура<button type="button" class="ms-2 btn-close" aria-label="Close"></button></div>
+      <div class="d-flex flex-wrap justify-content-end bd-highlight mb-3" id="good">
+        {{#each whiteList}}
+           <div class="ps-2 pe-2 mt-1 ms-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-50" id="{{name}}w">{{name}}<button type="button" class="ms-2 btn-close" id="delete" aria-label="Close"></button></div>
+        {{/each}}
 
       </div>
 
     </div>
     <div class="col">
       
-      <div class="d-flex flex-wrap bd-highlight mb-3">
+      <div class="d-flex flex-wrap bd-highlight mb-3" id="bad">
 
-        <div class="ps-2 pe-2 mt-1 me-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-90 bg-dark text-white">Происшествия<button type="button" class="btn-close btn-close-white" aria-label="Close"></button></div>
-        <div class="ps-2 pe-2 mt-1 me-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-90 bg-dark text-white">Война<button type="button" class="btn-close btn-close-white" aria-label="Close"></button></div>
-        <div class="ps-2 pe-2 mt-1 me-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-90 bg-dark text-white">Санкции<button type="button" class="btn-close btn-close-white" aria-label="Close"></button></div>
-        <div class="ps-2 pe-2 mt-1 me-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-90 bg-dark text-white">Политика<button type="button" class="btn-close btn-close-white" aria-label="Close"></button></div>
-        <div class="ps-2 pe-2 mt-1 me-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-90 bg-dark text-white">Религия<button type="button" class="btn-close btn-close-white" aria-label="Close"></button></div>
+        {{#each blackList}}
+            <div class="ps-2 pe-2 mt-1 me-1 d-flex align-items-center bd-highlight rounded-pill bg-secondary text-white bg-opacity-90 bg-dark text-white" id="{{name}}b">{{name}}<button type="button" class="ms-2 btn-close btn-close-white" id="delete" aria-label="Close"></button></div>
+        {{/each}}
 
       </div>
 
     </div>
     
 </div>
+
 
 
