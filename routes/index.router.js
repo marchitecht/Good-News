@@ -4,9 +4,9 @@ const { Tag, BWlist } = require('../db/models');
 
 router.route('/')
 .get( async (req, res) => {
-  const whiteList = await BWlist.findAll({where:{userId:req.session.user.id, isGood: true}, include:'Tag' })
-  console.log(whiteList);
-    res.render('index', {whiteList});
+  // const whiteList = await BWlist.findAll({where:{userId:req.session.user.id, isGood: true}, include:'Tag' })
+  // console.log(whiteList);
+    res.render('index');
   });
 router.post('/', async (req, res) => {
   const isGood = req.body.isGood;
